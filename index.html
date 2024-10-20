@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Instagram with Bootstrap</Title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" src="styles.css">
+
+    </head>
+    <body>
+      <!-- logo -->
+      <nav class="navbar bg-body-secondary ps-5 pe-5">
+        <div class="container-fluid">
+          <div class="navbar-brand col-9">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="font-monospace">Instagram</span>
+          </div>
+          <!-- botones -->
+          <button type="button" class="btn btn-success col-2" data-bs-toggle="modal" data-bs-target="#Modalcreate">
+           Create a new post
+          </button>
+          <div class="modal fade" id="Modalcreate" tabindex="-1" aria-labelledby="#Create" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="Create">Create a new post</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- modal -->
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label"><h6>Caption:</h6></label>
+                          <textarea class="form-control" id="message-text">Add the caption of your post here...</textarea>
+                        </div>
+                        <div class="container-fluid">
+                          <a href="#" class="btn btn-ligth border-secondary-subtle"><i class="fa-solid fa-camera"></i></a>
+                          <a href="#" class="btn  btn-ligth border-secondary-subtle"><i class="fa-solid fa-location-dot"></i></a>
+                        </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group dropstart">
+                <button class="btn btn-secondary dropdown-toggle col-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">profile</a></li>
+                    <li><a class="dropdown-item" href="#">accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">privay and data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item text-danger">log out</a></li>
+                </ul>
+          </div>
+        </nav>
+        <!-- pill -->
+      <div class="container ">
+        <ul class="nav nav-pills justify-content-center gap-3 m-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-layer-group bg-secondary"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square bg-secondary"></i></button>
+          </li>
+        </ul>
+        <!-- contenido -->
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="container">
+              <!-- fotos primera columna -->
+              <div class="row">
+                <div class="col">
+                  <img src="https://picsum.photos/id/236/400/300">
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/235/400/300">
+                  
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/247/400/300">
+                  
+                </div>
+              </div>
+              <br>
+              <!-- fotos segunda columna -->
+              <div class="row">
+                <div class="col">
+                  <img src="https://picsum.photos/id/237/400/300">
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/227/400/300">
+                  
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/217/400/300">
+                  
+                </div>
+              </div>
+              <!-- fotos tercera columna -->
+               <br>
+              <div class="row">
+                <div class="col">
+                  <img src="https://picsum.photos/id/233/400/300">
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/232/400/300">
+                  
+                </div>
+                <div class="col">
+                  <img src="https://picsum.photos/id/231/400/300">
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- segundo pill -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="container d-flex flex-column">
+            <div class="card1 align-self-center border border-dark" style="width: 400px;">
+              <div class=" d-flex justify-content-between">
+                <div><h5 class="card-title m-2">Post1</h5></div><div><p class="card-text fw-bold m-1">1/9</p></div>
+              </div>
+              <img src="https://picsum.photos/id/236/400/500" class="card-img-top" alt="...">
+              <div><text class="fw-bold">123likes</text></div>
+              <div class="texto m-3 border-top">Esta foto es una foto de la casa de Dorian.</div>
+            </div>
+            <br>
+            <div class="card2 align-self-center">
+              <div class="card1 align-self-center border border-dark" style="width: 400px;">
+                <div class=" d-flex justify-content-between">
+                  <div><h5 class="card-title m-2">Post2</h5></div><div><p class="card-text fw-bold m-1">2/9</p></div>
+                </div>
+                <img src="https://picsum.photos/id/235/400/300" class="card-img-top" alt="...">
+                <div><text class="fw-bold">124likes</text></div>
+                <div class="texto m-3 border-top">Esta es la montaña del señor de los anillos.</div>
+              </div>
+            </div>
+            <br>
+            <div class="card3 align-self-center">
+              <div class="card1 align-self-center border border-dark" style="width: 400px;">
+                <div class=" d-flex justify-content-between">
+                  <div><h5 class="card-title m-2">Post3</h5></div><div><p class="card-text fw-bold m-1">3/9</p></div>
+                </div>
+                <img src="https://picsum.photos/id/247/400/300" class="card-img-top" alt="...">
+                <div><text class="fw-bold">125likes</text></div>
+                <div class="texto m-3 border-top">Este es el desierto donde grabaron "La momia2".</div>
+              </div>
+            </div>
+            <div class="card4 align-self-center">
+              <div class="card1 align-self-center border border-dark" style="width: 400px;">
+                <div class=" d-flex justify-content-between">
+                  <div><h5 class="card-title m-2">Post4</h5></div><div><p class="card-text fw-bold m-1">4/9</p></div>
+                </div>
+                <img src="https://picsum.photos/id/237/400/300" class="card-img-top" alt="...">
+                <div><text class="fw-bold">126likes</text></div>
+                <div class="texto m-3 border-top">El perro de raza de Dorian.</div>
+              </div>
+            </div>
+          
+
+         </div>
+       </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+    </body>
+</html>
